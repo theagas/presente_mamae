@@ -16,7 +16,7 @@
           <div class="text">
             <strong>Luciana,</strong>
             <p>
-              Obrigado por sempre cuidar da nossa família. Sua inteligência e esforço são qualidades que eu admiro e reconheço muito, e me dão grande orgulho de ser seu filho. Eu te amo muito!
+                Obrigado por sempre cuidar da nossa família. Sua inteligência e esforço são qualidades que eu admiro e reconheço muito, tenho muito orgulho de ser seu filho. Eu te amo muito!
             </p>
           </div>
         </div>
@@ -26,11 +26,13 @@
   </div>
 
   <script>
+    // Abertura do envelope
     const envelope = document.querySelector('.envelope-wrapper');
     envelope.addEventListener('click', () => {
       envelope.classList.toggle('flap');
     });
 
+    // Efeito de digitação do título
     const title = document.querySelector('.titulo-mae');
     const text = title.textContent;
     title.textContent = '';
