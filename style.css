@@ -209,3 +209,31 @@ body::before {
     font-size: 9px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .envelope-wrapper {
+    transform: scale(0.7);
+    transform-origin: center;
+  }
+
+  .envelope > .letter {
+    width: 60%;
+    height: 75%;
+    font-size: 12px;
+    right: 20%;
+    padding: 10px 8px;
+  }
+
+  .envelope > .letter > .text {
+    font-size: 10px;
+  }
+
+  .heart {
+    transform: translate(-50%, -20%) scale(0.9) rotate(45deg);
+  }
+
+  h1.title {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
