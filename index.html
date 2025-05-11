@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dia das Mães - Carta</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="titulo-mae">Feliz Dia das Mães!</div>
+
+  <div class="container">
+    <div class="envelope-wrapper">
+      <div class="envelope">
+        <div class="letter">
+          <div class="text">
+            <strong>Luciana,</strong>
+            <p>
+                Obrigado por sempre cuidar da nossa família. Sua inteligência e esforço são qualidades que eu admiro e reconheço muito, tenho muito dão grande orgulho de ser seu filho. 
+                Eu te amo muito!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="heart"></div>
+    </div>
+  </div>
+
+  <script>
+    // Abertura do envelope
+    const envelope = document.querySelector('.envelope-wrapper');
+    envelope.addEventListener('click', () => {
+      envelope.classList.toggle('flap');
+    });
+
+    // Efeito de digitação do título
+    const title = document.querySelector('.titulo-mae');
+    const text = title.textContent;
+    title.textContent = '';
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        title.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+
+    setTimeout(typeWriter, 500);
+  </script>
+</body>
+</html>
